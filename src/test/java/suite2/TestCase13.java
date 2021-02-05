@@ -18,8 +18,6 @@ import java.util.HashMap;
 * ФР: тип сконвертировался из int в string, статус код 200
  */
 
-//TODO правильно определить условия выполнения теста
-
 public class TestCase13 {
     BaseClassTest requester = new BaseClassTest();
     HashMap map = new HashMap();
