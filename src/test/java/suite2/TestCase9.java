@@ -16,21 +16,10 @@ import static io.restassured.RestAssured.when;
 * ОР: ошибка 404 notFound
 * */
 
-public class TestCase9 {
-    BaseClassTest requester = new BaseClassTest();
-    String key_username = "Gerrantary";
-
-    @BeforeClass
-    public void setup(){
-        requester.setURI("https://petstore.swagger.io/v2/");
-        requester.setJsonDataPath("C:\\Users\\Gerant\\IdeaProjects\\Rest_API_Project_Test\\" +
-                "src\\main\\resources\\data2.json");
-    }
-
-
-    @Test(priority = 4)
+public class TestCase9 extends TestCase8{
+    @Test(priority = 4, dependsOnMethods = {"validatePostResponseSuper","validateGetResponseSuper"})
     public void validateDeleteResponseSuper(){
-       when().delete("user/"+ key_username)
+       requester.deleteRequest("user/"+ key_username)
                 .then().statusCode(200);
     }
 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Gerant/IdeaProjects/Rest_API_Project_Test/src/test/java/suite2">
+        <classes>
+            <class name="suite2.TestCase15"></class>
+            <class name="suite2.TestCase8"></class>
+            <class name="suite2.TestCase10"></class>
+            <class name="suite2.TestCase11"></class>
+            <class name="suite2.TestCase12"></class>
+            <class name="suite2.TestCase13"></class>
+            <class name="suite2.TestCase14"></class>
+            <class name="suite2.TestCase16"></class>
+        </classes>
+    </test>
+</suite>

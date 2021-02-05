@@ -20,7 +20,6 @@ import java.util.HashMap;
 * я решил произвести поиск по известном атрб.)
 * */
 
-//TODO написать утверждение что тест пройден
 public class TestCase12 {
     BaseClassTest requester = new BaseClassTest();
     HashMap map = new HashMap();

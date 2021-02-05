@@ -18,13 +18,11 @@ import services.BaseClassTest;
 
 public class TestCase11 {
     BaseClassTest requester = new BaseClassTest();
-    String key_username = "Gerrantary";
 
     @BeforeClass
     public void setup() {
         requester.setURI("https://petstore.swagger.io/v2/");
-        requester.setJsonDataPath("C:\\Users\\Gerant\\IdeaProjects\\Rest_API_Project_Test\\" +
-                "src\\main\\resources\\data3.json");
+        requester.setJsonDataPath("src/test/resources/data3.json");
     }
 
     @Test(priority = 8)

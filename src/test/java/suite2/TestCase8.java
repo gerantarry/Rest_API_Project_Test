@@ -22,16 +22,15 @@ import static services.ResponseUtils.responseGetValid;
 */
 
 public class TestCase8 {
-    BaseClassTest requester = new BaseClassTest();
+   public BaseClassTest requester = new BaseClassTest();
     JsonPath response1=null,response2=null;
     int key_id = 195674;
-    String key_username = "Gerrantary", key_firstname ="Ant";
+   public String key_username = "Gerrantary", key_firstname ="Ant";
 
     @BeforeClass
     public void setup(){
         requester.setURI("https://petstore.swagger.io/v2/");
-        requester.setJsonDataPath("C:\\Users\\Gerant\\IdeaProjects\\Rest_API_Project_Test\\" +
-                "src\\main\\resources\\data2.json");
+        requester.setJsonDataPath("src/test/resources/data2.json");
     }
 
     @Test(priority = 1)

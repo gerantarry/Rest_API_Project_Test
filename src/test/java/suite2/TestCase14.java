@@ -1,24 +1,23 @@
 package suite2;
 
-/*
-* Цель: сделать 2 post запроса с одинаковым id
-*
-* Подготовка: подготовить данные в объектах map1,map2
-*
-* 1. сделать post запрос с телом map1
-* 2. сделать post запрос с телом map2
-* 3. сделать get запрос по username1
-* 4. сделать get запрос по username2
-*
-* ОР: запрос по username1 - 404 NotFound
-*     запрос по username2 - 200 Ok
-* */
-
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import services.BaseClassTest;
-
 import java.util.HashMap;
+
+/*
+ * Цель: сделать 2 post запроса с одинаковым id
+ *
+ * Подготовка: подготовить данные в объектах map1,map2
+ *
+ * 1. сделать post запрос с телом map1
+ * 2. сделать post запрос с телом map2
+ * 3. сделать get запрос по username1
+ * 4. сделать get запрос по username2
+ *
+ * ОР: запрос по username1 - 404 NotFound
+ *     запрос по username2 - 200 Ok
+ * */
 
 public class TestCase14 {
     BaseClassTest requester = new BaseClassTest();
@@ -58,7 +57,6 @@ public class TestCase14 {
     public void validateGetResponse2() {
         requester.getRequest("user/" + username2)
                 .then().statusCode(200);
-
     }
 }
 

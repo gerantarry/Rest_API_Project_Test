@@ -16,23 +16,21 @@ import static io.restassured.RestAssured.when;
  * ОР: 404 NotFound
  * */
 
-public class TestCase15{
+public class TestCase15 extends TestCase9{
+//    @BeforeClass()
+//    public void setup() {
+//        requester.setURI("https://petstore.swagger.io/v2/");
+//        requester.setJsonDataPath("C:\\Users\\Gerant\\IdeaProjects\\Rest_API_Project_Test\\" +
+//                "src\\main\\resources\\data2.json");
+//    }
 
-    BaseClassTest requester = new BaseClassTest();
-    String username = "Gerrantary";
-
-    @BeforeClass()
-    public void setup() {
-        requester.setURI("https://petstore.swagger.io/v2/");
-        requester.setJsonDataPath("C:\\Users\\Gerant\\IdeaProjects\\Rest_API_Project_Test\\" +
-                "src\\main\\resources\\data2.json");
-    }
-
-    @Test(priority = 16)
+    @Test(priority = 16, dependsOnMethods = {"validateGetResponseSuper","validateGetResponse"})
     public void validateDeleteResponse(){
-        String log = when().delete("user/"+ username)
-                .then().statusCode(404).log().all().toString();
-        System.out.println(log);
+//        String log = when().delete("user/"+ key_username)
+//                .then().statusCode(404).log().all().toString();
+//        System.out.println(log);
+        requester.deleteRequest("user/"+key_username)
+                .then().statusCode(404);
     }
 
 }

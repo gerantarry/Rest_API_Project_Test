@@ -103,4 +103,20 @@ public class BaseClassTest extends EndpointConstans {
                 post(URI + PATH);
     }
 
+    public Response deleteRequest(String endpoint){
+        pathChecker(endpoint);
+        return given()
+                .when()
+                .delete(URI + PATH);
+    }
+
+    public Response putRequest(String endpoint){
+        pathChecker(endpoint);
+        return given().
+                contentType(ContentType.JSON).
+                when().
+                body(getJsonData()).
+                put(URI + PATH);
+    }
+
 }
